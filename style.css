@@ -1,0 +1,298 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Segoe UI";
+}
+
+body {
+    background: black;
+    color: white;
+}
+
+.header {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    flex-wrap: wrap !important;
+}
+
+/* .header > * {
+    border: 1px solid white;
+} */
+
+#title {
+    width: 400px;
+    padding: 50px;
+    text-align: center;
+}
+
+#title h1 {
+    display: flex;
+    justify-content: center;
+    text-transform: uppercase;
+    font-size: 3.5rem;
+    font-weight: 900;
+}
+
+#title p {
+    text-align: center;
+    font-weight: 400;
+    text-transform: uppercase;
+    color: pink;
+    margin-top: 5px;
+}
+
+#title p:after {
+    content: '';
+    display: block;
+    margin: 10px auto;
+    width: 80px;
+    height: 2px;
+    background: pink;
+}
+
+#img-div {
+    margin-top: 25px;
+    width: 800px;
+    padding: 0 10px;
+    box-sizing: border-box;
+}
+
+#img-div img {
+    width: 100%;
+    box-shadow: 0 0 10px #333;
+}
+
+#img-div div p {
+    margin-top: 10px;
+    text-align: center;
+    font-weight: 400;
+    font-style: italic;
+}
+
+#img-div div p:nth-child(2) {
+    margin-top: 0px;
+}
+
+#tribute-info {
+    margin-top: 35px;
+    display: flex;
+    justify-content: center;
+}
+
+#tribute-info > * {
+    margin: 10px;
+}
+
+h3 {
+    padding: 20px;
+    text-align: center;
+}
+
+.bgInformation, .career {
+    width: 350px;
+    background: #333;
+    color: white;
+    border-radius: 4px;
+    transition: .3s all ease-in-out;
+    box-shadow: 0 45px 50px -40px #333;
+}
+
+.bgInformation:hover, .career:hover {
+    background: lightpink;
+    transform: translateY(-5px);
+    box-shadow: 0 30px 25px -20px #333;
+}
+
+.bgInformation:hover p,.career:hover p {
+    color: darkred;
+}
+
+.bgInformation:hover small,.career:hover small {
+    color: black;
+}
+
+.bgInformation:hover .divider, .career:hover .divider {
+    background: red;
+}
+
+.bgInformation:hover .formGroup.Title a, .career:hover .formGroup.Title a {
+    background: red;
+    color: white;
+    border-color: red;
+}
+
+.formGroup p {
+    margin-bottom: 3px;
+    font-weight: 600;
+    transition: .3s all ease-in-out;
+}
+
+.career {
+    height: 380px;
+}
+
+.formGroup {
+    margin: 18px;
+}
+
+.divider {
+    width: 100%;
+    height: 1px;
+    transition: .3s all ease-in-out;
+    background: grey;
+}
+
+.formGroup.Title {
+    display: flex; 
+    justify-content: space-between;
+    align-items: center;
+}
+
+.formGroup.Title p {
+    color: red;
+    font-weight: 900;
+}
+
+.formGroup.Title p:after {
+    content: '';
+    display: block;
+    width: 50px;
+    margin-top: 6px;
+    height: 2px;
+    background: red;
+    transition: .3s all ease-in-out;
+}
+
+.formGroup a {
+    color: red;
+}
+
+.formGroup.Title a {
+    background: pink;
+    cursor: pointer;
+    color: darkred;
+    border-radius: 4px;
+    padding: 8px 15px;
+    box-shadow: 0 10px 30px -15px red;
+    transition: .3s all ease-in-out;
+    border: 1px solid pink;
+    font-weight: 600;
+    font-size: 14px;
+    text-decoration: none;
+}
+
+.formGroup.Title a:hover {
+    box-shadow: 0 0 5px pink;
+}
+
+a {
+    text-decoration: none;
+}
+
+.moreInformation {
+    margin-top: 35px;
+    text-align: center;
+    font-size: 1.5rem;
+    margin-bottom: 30px;
+}
+
+.channelYoutube {
+    margin-top: 50px;
+    padding: 0 100px;
+}
+
+.channelYoutube h1 { 
+    text-align: center;
+    color: #333;
+    font-size: 6rem;
+    text-transform: uppercase;
+    font-weight: 900;
+}
+
+.channelYoutube div {
+    margin-top: -50px;
+    justify-content: center;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+}
+
+.channelYoutube div > * {
+    margin: 5px;
+}
+
+iframe {
+    border-radius: 4px;
+    box-shadow: 0 45px 50px -40px #333;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+@media(max-width: 600px) {
+    #title h1 {
+        font-size: 3rem;
+    }
+    
+    #title p {
+        font-size: .9rem;
+    }
+
+    #img-div  {
+        margin-top: -50px;
+        padding: 0;
+    }
+
+    #img-div div  {
+        margin-top: 20px;
+    }
+
+    #img-div div p {
+        margin-bottom: 5px;
+    }
+
+    #tribute-info {
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .bgInformation, .career { 
+        width: 100%;
+    }
+
+    .moreInformation {
+        padding: 0 10px;
+        font-size: 1.2rem;
+        text-align: center;
+    }
+
+    .channelYoutube {
+        padding: 0;
+    }
+
+    .header {
+        flex-wrap: wrap;
+    }
+
+    #title {
+        padding: 0;
+    }
+
+    .channelYoutube h1 {
+        font-size: 4rem;
+    }
+}
+
+
+
+
+
+
+
+
