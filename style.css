@@ -13,32 +13,25 @@ body {
 .header {
     width: 100%;
     display: flex;
-    justify-content: center;
+    justify-content: space-between;
     align-items: center;
-    min-height: 100vh;
-    flex-wrap: wrap !important;
+    height: 100vh;
+    flex-wrap: wrap;
+    text-align: center;
 }
 
-/* .header > * {
-    border: 1px solid white;
-} */
-
 #title {
-    width: 400px;
-    padding: 50px;
-    text-align: center;
+    margin: auto;
 }
 
 #title h1 {
     display: flex;
-    justify-content: center;
     text-transform: uppercase;
     font-size: 3.5rem;
     font-weight: 900;
 }
 
 #title p {
-    text-align: center;
     font-weight: 400;
     text-transform: uppercase;
     color: pink;
@@ -48,21 +41,19 @@ body {
 #title p:after {
     content: '';
     display: block;
-    margin: 10px auto;
+    margin: 15px auto;
     width: 80px;
     height: 2px;
     background: pink;
 }
 
 #img-div {
-    margin-top: 25px;
-    width: 800px;
-    padding: 0 10px;
-    box-sizing: border-box;
+    margin: auto;
 }
 
 #img-div img {
-    width: 100%;
+    display: block;
+    max-width: 100%;
     box-shadow: 0 0 10px #333;
 }
 
@@ -77,15 +68,16 @@ body {
     margin-top: 0px;
 }
 
-#tribute-info {
+#tribute-info  {
+    overflow: hidden;
+}
+
+#tribute-info .contentInfo {
     margin-top: 35px;
     display: flex;
     justify-content: center;
 }
 
-#tribute-info > * {
-    margin: 10px;
-}
 
 h3 {
     padding: 20px;
@@ -99,9 +91,28 @@ h3 {
     border-radius: 4px;
     transition: .3s all ease-in-out;
     box-shadow: 0 45px 50px -40px #333;
+    transform: scale(.97);
+    position: relative;
+    overflow: hidden;
+}
+
+.bgInformation:after, .career:after {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 0;
+    background: blueviolet;
+    width: 5px;
+    height: 100%;
+    transition: .3s all ease-in-out;
+}
+
+.bgInformation:hover:after, .career:hover:after {
+    background: darkred;
 }
 
 .bgInformation:hover, .career:hover {
+    transform: scale(1);
     background: lightpink;
     transform: translateY(-5px);
     box-shadow: 0 30px 25px -20px #333;
@@ -132,7 +143,7 @@ h3 {
 }
 
 .career {
-    height: 380px;
+    height: 100%;
 }
 
 .formGroup {
@@ -205,12 +216,19 @@ a {
     padding: 0 100px;
 }
 
-.channelYoutube h1 { 
+.channelYoutube h1, #tribute-info h1 { 
     text-align: center;
-    color: #333;
+    color: rgb(27, 27, 27);
     font-size: 6rem;
     text-transform: uppercase;
     font-weight: 900;
+    opacity: 0.9;
+    cursor: default;
+    text-shadow: 0 0 5px rgb(27, 27, 27);
+}
+
+#tribute-info h1 {
+    margin-bottom: -90px;
 }
 
 .channelYoutube div {
@@ -227,6 +245,11 @@ a {
 
 iframe {
     border-radius: 4px;
+    box-shadow: 0 -20px 50px 0px #333;
+    position: relative;
+}
+
+iframe:nth-child(3) {
     box-shadow: 0 45px 50px -40px #333;
 }
 
@@ -235,8 +258,12 @@ a:hover {
 }
 
 @media(max-width: 600px) {
+    .header {
+        justify-content: center;
+    }
+
     #title h1 {
-        font-size: 3rem;
+        font-size: 2.5rem;
     }
     
     #title p {
@@ -244,8 +271,7 @@ a:hover {
     }
 
     #img-div  {
-        margin-top: -50px;
-        padding: 0;
+        margin-top: 0px;
     }
 
     #img-div div  {
@@ -256,7 +282,7 @@ a:hover {
         margin-bottom: 5px;
     }
 
-    #tribute-info {
+    #tribute-info .contentInfo {
         flex-wrap: wrap;
         justify-content: center;
         align-items: center;
@@ -279,15 +305,17 @@ a:hover {
     .header {
         flex-wrap: wrap;
     }
+}
 
-    #title {
-        padding: 0;
-    }
-
+@media (max-width: 355px) {
     .channelYoutube h1 {
-        font-size: 4rem;
+        font-size: 3rem;
     }
 }
+
+
+
+
 
 
 
